@@ -14,7 +14,7 @@ class PostulacionesController < ApplicationController
             works.each do |lim|
             limSup = (lim["end"]==nil)?true:d<=Date.parse(lim["end"])
             if Date.parse(lim["start"])<d and limSup
-                count+=1
+                count+=1.0
                 break
             end
           end
