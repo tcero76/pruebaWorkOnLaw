@@ -5,7 +5,7 @@ class PostulacionesControllerTest < ActionDispatch::IntegrationTest
         get "/postulaciones?email=nikola@tesla.org"
         res = JSON.parse(@response.body)
         diff = (Date.today - Date.parse("2020-03-15")).to_i
-        antiquity = (( 584.0 + diff) / 365).to_d.round(1)
+        antiquity = (( 584.0 + diff.to_d) / 365.0).round(1)
         assert_equal antiquity, res["work_experience_years"].to_d
     end
 
