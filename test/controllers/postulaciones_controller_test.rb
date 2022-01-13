@@ -22,5 +22,11 @@ class PostulacionesControllerTest < ActionDispatch::IntegrationTest
         res = JSON.parse(@response.body)
         assert_equal 0.0, res["work_experience_years"].to_d
     end
+
+    test "Verificar experiencia de usuario inexistente" do
+        get "/postulaciones?email=asdf"
+        res = JSON.parse(@response.body)
+        assert_equal nil, res["work_experience_years"]
+    end
       
 end
