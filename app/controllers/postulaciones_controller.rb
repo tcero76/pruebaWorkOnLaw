@@ -2,7 +2,7 @@ require 'net/https'
 
 class PostulacionesController < ApplicationController
 
-    def index
+    def findByEmail
         email = params[:email]
         uri = URI('https://api.workon.law/technical_challenge/get_lawyers')
         res = Net::HTTP.get(uri)
