@@ -2,7 +2,7 @@
 
 ## Endpoints:
 
-Los endpoint con los siguientes parámetros entregan valores diferentes a cero:
+Los endpoint con los siguientes parámetros entregan valores diferentes a nil:
 * http://localhost:3000/postulaciones?email=jane@goodall.org
 * http://localhost:3000/postulaciones?email=nikola@tesla.org
 * http://localhost:3000/postulaciones?email=isaac@asimov.org
